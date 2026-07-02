@@ -1,0 +1,79 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter create .
+
+## exception
+
+_TypeError: type 'Null' is not a subtype of type 'YamlMap' in type cast
+
+```
+#0      gatherSdkPackageDependencies (package:flutter_tools/src/commands/create.dart:1389:88)
+#1      _generatePubspecLock (package:flutter_tools/src/commands/create.dart:1374:27)
+#2      CreateCommand.runCommand (package:flutter_tools/src/commands/create.dart:550:5)
+<asynchronous suspension>
+#3      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1630:27)
+<asynchronous suspension>
+#4      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#5      CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#6      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:496:9)
+<asynchronous suspension>
+#7      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#8      FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:431:5)
+<asynchronous suspension>
+#9      FlutterCommandRunner.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:307:33)
+<asynchronous suspension>
+#10     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:104:11)
+<asynchronous suspension>
+#11     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+<asynchronous suspension>
+#12     main (package:flutter_tools/executable.dart:103:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.44.2, on Ubuntu 26.04 LTS 7.0.0-22-generic, locale fr_FR.UTF-8) [93ms]
+    [32m•[39m Flutter version 3.44.2 on channel stable at /home/vodahmin/snap/flutter/common/flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision c9a6c48423 (il y a 11 jours), 2026-06-10 15:52:41 -0700
+    [32m•[39m Engine revision 77e2e94772
+    [32m•[39m Dart version 3.12.2
+    [32m•[39m DevTools version 2.57.0
+    [32m•[39m Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop, enable-android, enable-ios, cli-animations, enable-native-assets, enable-swift-package-manager, omit-legacy-version-file,
+      enable-lldb-debugging, enable-uiscene-migration
+
+[31m[✗][39m Android toolchain - develop for Android devices [43ms]
+    [31m✗[39m Unable to locate Android SDK.
+      Install Android Studio from: https://developer.android.com/studio/index.html
+      On first launch it will assist you in installing the Android SDK components.
+      (or visit https://flutter.dev/to/linux-android-setup for detailed instructions).
+      If the Android SDK has been installed to a custom location, please use
+      `flutter config --android-sdk` to update to that location.
+
+
+[31m[✗][39m Chrome - develop for the web (Cannot find Chrome executable at google-chrome) [23ms]
+    [33m![39m Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
+
+[32m[✓][39m Linux toolchain - develop for Linux desktop [231ms]
+    [32m•[39m clang version 10.0.0-4ubuntu1
+    [32m•[39m cmake version 3.16.3
+    [32m•[39m ninja version 1.10.0
+    [32m•[39m pkg-config version 0.29.1
+    [33m![39m Unable to access driver information using 'eglinfo'.
+      It is likely available from your distribution (e.g.: apt install mesa-utils)
+
+[32m[✓][39m Connected device (1 available) [48ms]
+    [32m•[39m Linux (desktop) • linux • linux-x64 • Ubuntu 26.04 LTS 7.0.0-22-generic
+
+[32m[✓][39m Network resources [267ms]
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 2 categories.
+```
